@@ -27,7 +27,7 @@ function onInputSearch(e) {
     }
 
 
-    fetchCountries('inputValue')
+    fetchCountries(inputValue)
         .then(countries => {
             if (countries.length > 10) {
                 clearData();
@@ -56,12 +56,13 @@ function onInputSearch(e) {
     <h1>${country.name.official}</h1>
     <p><span>Capital:</span>${country.capital}</p>
     <p><span>Population:</span>${country.population}</p>
-    <p><span>Languages:</span>${country.languages}.join(',')</p>`
+    <p><span>Languages:</span>${Object.values(country.languages)}.join(',')</p>
+    </div>`;
         refs.countryInfo.innerHTML = markup;
     }
 
     function renderCountries(countries) {
-        
+
         const countriesMarcup = countries.map((country) => {
             return `
         <li>
