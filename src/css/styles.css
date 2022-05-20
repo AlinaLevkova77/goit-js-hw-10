@@ -21,5 +21,18 @@ body {
 
 li{
   list-style: none;
-  
+  display: flex;
+  margin-bottom: 5px;
+}
+
+img{
+  width: 40px;
+  margin-right: 15px;
+}
+.info{
+  display: flex;
+  text-align: center;
+}
+h1{
+  display: inline;
 }

@@ -56,13 +56,13 @@ function onInputSearch(e) {
     <h1>${country.name.official}</h1>
     <p><span>Capital:</span>${country.capital}</p>
     <p><span>Population:</span>${country.population}</p>
-    <p><span>Languages:</span>${Object.values(country.languages)}.join(',')</p>
+    <p><span>Languages:</span>${Object.values(country.languages)}</p>
     </div>`;
         refs.countryInfo.innerHTML = markup;
     }
 
     function renderCountries(countries) {
-
+        clearData();
         const countriesMarcup = countries.map((country) => {
             return `
         <li>
